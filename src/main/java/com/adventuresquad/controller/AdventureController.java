@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.adventuresquad.model.Adventure;
+import com.adventuresquad.model.User;
 import com.adventuresquad.service.AdventureService;
 
 
@@ -40,7 +41,8 @@ public class AdventureController {
   
   @PutMapping("{adventure_id}")
   public ResponseEntity<Adventure> updateAdventure(@PathVariable("adventure_id") int adventureId, @RequestBody Adventure adventure){
-      return new ResponseEntity<Adventure>(adventureService.updateAdventure(adventure, adventureId), HttpStatus.OK);
+   
+    return new ResponseEntity<Adventure>(adventureService.updateAdventure(adventure, adventureId), HttpStatus.OK);
   }
   
 

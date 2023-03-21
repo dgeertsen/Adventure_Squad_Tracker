@@ -13,12 +13,12 @@ public interface UserService {
   //specific, looking by user ID, READ
   public User getUserById(int id);
   
-  //Post a player, CREATE
+  //Post a user, CREATE
   public User saveUser(User user);
   
-  //Update a player, UPDATE
-  public User updateUser(User user, int Id);
+  //Put a user, UPDATE
+  public User updateUser(User user, int id);
   
-  //Delete a player, DELETE
-  public void deleteUser(int Id);
+  //Delete a user, DELETE
+  public void deleteUser(int id);
 }

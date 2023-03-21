@@ -27,28 +27,34 @@ public class UserController {
     super();
     this.userService=userService;
   }
-
+  
+  //Get all users
   @GetMapping
   public List<User> getAllUsers(){
       return userService.getAllUsers();
   }
   
+  //Getting user by id
   @GetMapping("{user_id}")
-  public ResponseEntity<User> getuserById(@PathVariable("user_id") int userId){
+  public ResponseEntity<User> getUserById(@PathVariable("user_id") int userId){
       return new ResponseEntity<User>(userService.getUserById(userId), HttpStatus.OK);
   }
+  
+  //Createing a user
   @PostMapping
   public ResponseEntity<User> saveUser(@RequestBody User user){
       return new ResponseEntity<User>(userService.saveUser(user), HttpStatus.CREATED);
   }
   
+  //Updating a user
   @PutMapping("{user_id}")
-  public ResponseEntity<User> updateuser(@PathVariable("user_id") int userId, @RequestBody User user){
-      return new ResponseEntity<User>(userService.updateUser(user, userId), HttpStatus.OK);
+  public ResponseEntity<User> updateUser(@PathVariable("user_id") int userId, @RequestBody User user){
+     return new ResponseEntity<User>(userService.updateUser(user, userId), HttpStatus.OK);
   }
   
+  //Deleting a user
   @DeleteMapping("{user_id}")
-  public ResponseEntity<String> deleteuser(@PathVariable("user_id") int userId){
+  public ResponseEntity<String> deleteUser(@PathVariable("user_id") int userId){
       userService.deleteUser(userId);
       return new ResponseEntity<String>("Adventurer has been deleted.", HttpStatus.OK);
   }
