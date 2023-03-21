@@ -17,24 +17,25 @@ public class UserServiceImplemented implements UserService {
     this.userRepository=userRepository;
   }
   
-  //get all generic
+  //Get all users
   @Override
   public List<User> getAllUsers() {
       return userRepository.findAll();
   }
 
-  //get by a specific Id
+  //Get a user by Specific id
   @Override
   public User getUserById(int id) {
       return userRepository.findById(id).orElseThrow(() -> new UserException("User", "Id", id));
   }
-  //posting a player
+  //Create a new user
   @Override
   public User saveUser(User player) {
       return userRepository.save(player);
   }
 
   
+  //Modify an exist user
   @Override
   public User updateUser(User player, int Id) {
       User existingUser = userRepository.findById(Id).orElseThrow(() -> new UserException("User", "Id", Id));
@@ -46,7 +47,7 @@ public class UserServiceImplemented implements UserService {
       return existingUser;
   }
 
-  
+  //Delete a user
   public void deleteUser(int Id) {
       User existingUser = userRepository.findById(Id).orElseThrow(() -> new UserException("User", "Id", Id));
       userRepository.deleteById(Id);
