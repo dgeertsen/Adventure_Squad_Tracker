@@ -1,3 +1,4 @@
+
 DROP TABLE IF EXISTS `user_adventure`;
 DROP TABLE IF EXISTS `user`;
 DROP TABLE IF EXISTS `adventure`;
