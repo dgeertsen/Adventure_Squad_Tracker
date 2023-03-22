@@ -43,7 +43,9 @@ public class AdventureServiceImplemented implements AdventureService {
     existingAdventure.setStart_date(adventure.getStart_date());
     existingAdventure.setEnd_date(adventure.getEnd_date());
     
-    return adventureRepository.save(existingAdventure);
+    adventureRepository.save(existingAdventure);
+    
+    return existingAdventure;
   }
 
   

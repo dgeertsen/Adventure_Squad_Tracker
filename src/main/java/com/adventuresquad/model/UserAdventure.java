@@ -16,9 +16,9 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name="user_adventure")
-public class User_Adventure {
+public class UserAdventure {
   //Primary Key
   @Id
+  private int user_id;
   private int adventure_id;
-  private int location_id;
 }

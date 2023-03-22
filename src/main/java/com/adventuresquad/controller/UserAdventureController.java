@@ -14,33 +14,28 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.adventuresquad.model.Adventure;
 import com.adventuresquad.model.Location;
+import com.adventuresquad.model.UserAdventure;
 import com.adventuresquad.service.AdventureService;
 import com.adventuresquad.service.LocationService;
+import com.adventuresquad.service.UserAdventureService;
 
 
 
 @RestController
-@RequestMapping("/adventure_squad/location")
-public class LocationController {
+@RequestMapping("/adventure_squad/user_adventure")
+public class UserAdventureController {
   
-  private LocationService locationService;
+  private UserAdventureService userAdventureService;
   @Autowired
-  public LocationController(LocationService locationService) {
+  public UserAdventureController(UserAdventureService userAdventureService) {
     super();
-    this.locationService=locationService;
+    this.userAdventureService=userAdventureService;
   }
 
   @GetMapping
-  public List<Location> getAllLocations(){
-      return locationService.getAllLocations();
+  public List<UserAdventure> getAllUserAdventures(){
+      return userAdventureService.getAllUserAdventures();
   }
-  
-  @PostMapping
-  public ResponseEntity<Location> saveLocation(@RequestBody Location location){
-      return new ResponseEntity<Location>(locationService.saveLocation(location), HttpStatus.CREATED);
-  }
-  
-
   
 
   
