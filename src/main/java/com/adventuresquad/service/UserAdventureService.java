@@ -10,8 +10,6 @@ public interface UserAdventureService {
   //Get all UserAdventures READ
   public List<UserAdventure> getAllUserAdventures();
   
-  //Update a UserAdventure, UPDATE
-  public UserAdventure updateUserAdventure(UserAdventure userAdventure, int Id);
-  
+ 
 
 }

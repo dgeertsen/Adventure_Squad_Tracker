@@ -17,7 +17,7 @@ CREATE TABLE `adventure` (
   `start_date` date NOT NULL,
   `end_date` date DEFAULT NULL,
   PRIMARY KEY (`adventure_id`),
-  FOREIGN KEY (`location_id`) REFERENCES `location` (`location_id`)
+  FOREIGN KEY (`location_id`) REFERENCES `location` (`location_id`) ON DELETE CASCADE
 );
 
 CREATE TABLE `user` (
@@ -32,6 +32,6 @@ CREATE TABLE `user_adventure` (
   `user_id` int NOT NULL,
   `adventure_id` int NOT NULL,
   PRIMARY KEY (`user_id`,`adventure_id`),
-  FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`),
-  FOREIGN KEY (`adventure_id`) REFERENCES `adventure` (`adventure_id`)
+  FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE,
+  FOREIGN KEY (`adventure_id`) REFERENCES `adventure` (`adventure_id`) ON DELETE CASCADE
 );
