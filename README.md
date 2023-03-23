@@ -1,13 +1,15 @@
 # Adventure_Squad_Tracker
 API for The Adventure Squad to track Adventures, Locations and Attendees
 
-## Table of Contents
-
-Coming Soon 
-
 ## Tools Used
 
-Comming Soon
+* [Java](https://docs.oracle.com/en/java/javase/16/)
+* [Lombok](https://projectlombok.org/)
+* [Maven](https://maven.apache.org/)
+* [MySQL Database](https://dev.mysql.com/doc/)
+* [Spring Boot](https://spring.io/projects/spring-boot)
+* [SQL](https://dev.mysql.com/doc/sql-reference.html)
+
 
 ## Installation 
 
@@ -49,6 +51,6 @@ DELETE /items/:id: Deletes an existing item from the database.
 Each request should include the appropriate headers and data (if necessary) in the request body.-->
 
 
-## License
-This project is licensed under the MIT License. See the LICENSE file for more information.
+<!--## License
+This project is licensed under the MIT License. See the LICENSE file for more information.-->
 
