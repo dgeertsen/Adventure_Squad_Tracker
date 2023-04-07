@@ -26,6 +26,10 @@ coming soon
 
 coming soon
 
+### Video Demonstration
+
+https://youtu.be/xzhV7Y8TXKw
+
 ## Functions of the API
 
 ### User Table
