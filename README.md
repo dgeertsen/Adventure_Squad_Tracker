@@ -34,7 +34,9 @@ https://youtu.be/xzhV7Y8TXKw
 
 ### User Table
 
-coming soon
+#### Calls
+
+##### Get by user_id
 
 ### Adventure Table
 
